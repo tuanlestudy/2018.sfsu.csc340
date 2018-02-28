@@ -74,13 +74,30 @@ int main(int argc, const char * argv[]) {
 void push_back(WordFreq* &p_WF, int& capacity, int& size, const WordFreq& wf1){
     //Step 1: Check if p_WF has reached its capacity
     if (size == capacity){
-        WordFreq *tmpArr=new WordFreq[capacity*2];
         //a. allocate a new space with larger capacity
         
-        //e.
+        WordFreq *tmpArr=new WordFreq[capacity*2];
+        
+        //b. tranfer the data from the old space to the new
+        
+        //c. insert the new object at the end
+        
+        //d. delete the old space
+        delete [] p_WF;
+        
+        //e. point p_WF to the new space, and update capacity and size
         p_WF = tmpArr; capacity *=2; size++;
+        size++;
+    }else{
+        
         
     }
+    size = 20;
+    
+    push_back(p_WF, capacity, size,wf1);
+    
+    //delete the memory space
+    delete [] p_WF;
     
     
     
@@ -93,3 +110,4 @@ void push_back(WordFreq* &p_WF, int& capacity, int& size, const WordFreq& wf1){
     
     
 }
+
