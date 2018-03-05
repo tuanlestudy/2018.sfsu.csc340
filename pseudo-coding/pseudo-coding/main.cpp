@@ -3,7 +3,7 @@
 //  2018sfsu.csc340.pseudo-coding
 //
 //  Created by Le Tuan on 3/4/18.
-//  Copyright Â© 2018 Le Tuan. All rights reserved.
+//  Copyright © 2018 Le Tuan. All rights reserved.
 //
 
 #include <iostream>
@@ -19,25 +19,24 @@ struct TokenFreq {
     int freq;
 };
 
-void sentencesSplitter(string & aritcle, vector<TokenFreq> & tfVec, int & indexVec);
-int tokenizer(string & sentences, vector<TokenFreq> & tfVec, int & indexVec);
-void printVector(vector<TokenFreq> & tfVec);
+void sentencesSplitter(string & aritcle, vector<TokenFreq> & tfVec);
+int tokenizer(string sentences, vector<TokenFreq> tfVec, int indexVec);
+void printVector(vector<TokenFreq>  tfVec);
 
 //main
 
 int main(int argc, const char * argv[]) {
     //string ostr = ostr2;
     string istr = "It's really a milestone in Chinese science fiction. This is the best place in the world.";
-    
-    int indexVec = 0;
+
     vector<TokenFreq> tfVec;
-    sentencesSplitter(istr, tfVec, indexVec);
+    sentencesSplitter(istr, tfVec);
     printVector(tfVec);
     return 0;
 }
 //-----
 
-int tokenizer(string & sentences, vector<TokenFreq> & tfVec, int & indexVec) {
+void tokenizer(string sentences, vector<TokenFreq> & tfVec, int & indexVec) {
     int index_sentences = 0;
     int end_sentences = 0;
     string word;
@@ -54,22 +53,21 @@ int tokenizer(string & sentences, vector<TokenFreq> & tfVec, int & indexVec) {
                     check = false;
                     end_sentences = k;
                     word2temp = sentences.substr(index_sentences, end_sentences - index_sentences);
-                    
+
                     if (word1temp != word2temp) {
                         if (indexVec == 0){
-                            
                             cout << "test" << endl;
-                            tfVec[indexVec].word1 = word1temp;
-                            
+                            try{
+                                tfVec[indexVec].word1 = word1temp;
+                            }catch(int e){
+                                cout << e << endl;
+                            }
                             cout << "test" << endl;
                             tfVec[indexVec].word2 = word2temp;
-                            
                             cout << "test" << endl;
                             tfVec[indexVec].freq = 1;
-                            
                             cout << "test" << endl;
                             tfVec.push_back(TokenFreq());
-                            
                             cout << "test" << endl;
                             indexVec++;
                         }else{
@@ -95,21 +93,22 @@ int tokenizer(string & sentences, vector<TokenFreq> & tfVec, int & indexVec) {
                                 tfVec.push_back(TokenFreq());
                                 indexVec++;
                             }
-                            
+
                         }
                     }
-                    
+
                 }
             }//end-for-k
         }
     }//end-for-j
-    return indexVec;
+    return;
 }//end-void
 
-void sentencesSplitter(string & article, vector<TokenFreq> & tfVec, int & indexVec) {
+void sentencesSplitter(string & article, vector<TokenFreq> & tfVec) {
     int index_sentences = 0;
     int end_sentences = 0;
     string sentences;
+    int indexVec = 0;
     for (int i = 0; i < article.length(); i++) {
         if (article.at(i) == '.') {
             end_sentences = i;
