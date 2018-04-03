@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2A7D0FCA20732BE70079691B /* fileIOs_wordPairsmain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A7D0FC920732BE70079691B /* fileIOs_wordPairsmain.cpp */; };
+		2A7D0FCA20732BE70079691B /* fileIOs_wordPairs_main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A7D0FC920732BE70079691B /* fileIOs_wordPairs_main.cpp */; };
 		2A7D0FD320732C9C0079691B /* fileIOs_wordPairs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A7D0FD120732C9C0079691B /* fileIOs_wordPairs.cpp */; };
 /* End PBXBuildFile section */
 
@@ -25,7 +25,7 @@
 
 /* Begin PBXFileReference section */
 		2A7D0FC620732BE70079691B /* codeLab04 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = codeLab04; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A7D0FC920732BE70079691B /* fileIOs_wordPairsmain.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = fileIOs_wordPairsmain.cpp; sourceTree = "<group>"; };
+		2A7D0FC920732BE70079691B /* fileIOs_wordPairs_main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = fileIOs_wordPairs_main.cpp; sourceTree = "<group>"; };
 		2A7D0FD020732C8E0079691B /* fileIOs_wordPairs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fileIOs_wordPairs.h; sourceTree = "<group>"; };
 		2A7D0FD120732C9C0079691B /* fileIOs_wordPairs.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = fileIOs_wordPairs.cpp; sourceTree = "<group>"; };
 		2A7D0FD220732C9C0079691B /* fileIOs_wordPairs.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fileIOs_wordPairs.hpp; sourceTree = "<group>"; };
@@ -63,7 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				2A7D0FD4207334480079691B /* SteveJobsSpeech2005.txt */,
-				2A7D0FC920732BE70079691B /* fileIOs_wordPairsmain.cpp */,
+				2A7D0FC920732BE70079691B /* fileIOs_wordPairs_main.cpp */,
 				2A7D0FD020732C8E0079691B /* fileIOs_wordPairs.h */,
 				2A7D0FD120732C9C0079691B /* fileIOs_wordPairs.cpp */,
 				2A7D0FD220732C9C0079691B /* fileIOs_wordPairs.hpp */,
@@ -127,7 +127,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A7D0FCA20732BE70079691B /* fileIOs_wordPairsmain.cpp in Sources */,
+				2A7D0FCA20732BE70079691B /* fileIOs_wordPairs_main.cpp in Sources */,
 				2A7D0FD320732C9C0079691B /* fileIOs_wordPairs.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

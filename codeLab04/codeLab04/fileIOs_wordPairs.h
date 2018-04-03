@@ -9,8 +9,16 @@
 #ifndef fileIOs_wordPairs_h
 #define fileIOs_wordPairs_h
 
-#include <vector>
+#include <iostream>
+#include <utility>
+#include <string>
 #include <map>
+#include <iterator>
+#include <cstring>
+#include <algorithm>
+#include <set>
+#include <vector>
+#include <fstream>
 
 using namespace std;
 // Header file contents

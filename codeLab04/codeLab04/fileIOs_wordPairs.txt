@@ -1,0 +1,10 @@
+<18, 6>: 1
+<18, a>: 1
+<18, after>: 1
+<18, another>: 1
+<18, around>: 1
+<she, to>: 4
+<college, my>: 4
+<a, i>: 4
+<a, college>: 4
+<my, that>: 3

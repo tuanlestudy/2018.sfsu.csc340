@@ -6,22 +6,28 @@
 //  Copyright © 2018 Le Tuan. All rights reserved.
 //
 
-#include "fileIOs_wordPairs.hpp"
+//#include "fileIOs_wordPairs.hpp"
 #include <iostream>
-#include <vector>
+#include <utility>
+#include <string>
 #include <map>
+#include <iterator>
+#include <cstring>
+#include <algorithm>
+#include <set>
+#include <vector>
 #include <fstream>
 
-
 using namespace std;
+
 // Header file contents
 bool sentenceSplitter( string& fname, vector<string>& sentences){
     string lines;
     string stringLine;
     ifstream inputFile;
-    inputFile.open("SteveJobsSpeech2005.txt");
+    inputFile.open(fname);
     if (!inputFile) {
-        cerr << "Unable to open file SteveJobsSpeech2005.txt" << endl;
+        cerr << "Unable to open file" << endl;
         //exit(1);   // call system to stop
         return false;
     }
@@ -30,10 +36,11 @@ bool sentenceSplitter( string& fname, vector<string>& sentences){
     }
     //cout << stringLine << endl;
     inputFile.close();
-    
+    //string stringLine = fname;
     string sentence;
     int beg = 0, end = 0;
-    for (int i = 0; i < stringLine.length(); i++){
+    for (unsigned int i = 0; i < stringLine.length(); i++){
+        if (stringLine[i] == '"') stringLine[i]=' ';
         if(stringLine[i] == '.' || stringLine[i] == '?'){
             end = i - beg;
             sentence = stringLine.substr(beg,end);
@@ -188,7 +195,9 @@ bool freqWordpairMmap(map< pair<string,string>, int> &wordpairFreq_map, multimap
     }
     return true;
 }
-void printWordpairs(multimap<int, pair<string, string> > &freqWordpair_multimap, string outFname, int topCnt, int botCnt){
+
+void printWordpairs(multimap<int, pair<string, string>> &freqWordpair_multimap, string outFname, int topCnt, int botCnt)
+{
     ofstream myfile;
     multimap<int, pair<string, string>>::iterator it;
     multimap<int, pair<string, string>>::reverse_iterator rit;
