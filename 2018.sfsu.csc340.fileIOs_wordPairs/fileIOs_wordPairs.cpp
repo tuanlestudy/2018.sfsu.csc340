@@ -2,6 +2,7 @@
 #include <map>
 #include <vector>
 
+using namespace std;
 bool sentenceSplitter( string& fname, vector<string>& sentences){
     
 }

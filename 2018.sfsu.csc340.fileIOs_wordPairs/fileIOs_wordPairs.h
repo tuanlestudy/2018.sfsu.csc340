@@ -1,6 +1,10 @@
-#ifndef fileOs_wordPairs
-#define fileOs_wordPairs
+#ifndef fileOs_wordPairs_h
+#define fileOs_wordPairs_h
 
+#include <vector>
+#include <map>
+
+using namespace std;
 // Header file contents
 bool sentenceSplitter( string& fname, vector<string>& sentences);
 /*
