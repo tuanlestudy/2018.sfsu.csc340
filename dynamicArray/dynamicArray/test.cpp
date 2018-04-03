@@ -1,20 +1,29 @@
+// fileIOs_wordPairs.cpp
+
 #include <iostream>
+
 #include <utility>
+
 #include <string>
+
 #include <map>
+
 #include <iterator>
+
 #include <algorithm>
+
 #include <set>
+
 #include <vector>
+
 #include <fstream>
+
 #include <set>
+
 #include <cstring>
 
 using namespace std;
 
-void printTest(){
-    cout << "test";
-}
 bool sentenceSplitter(string &fname, vector<string> &sentences)
 {
 
@@ -386,12 +395,10 @@ void printWordpairs(multimap<int, pair<string, string>> &freqWordpair_multimap, 
             }
         }
     }
-
     else
     {
 
         cout << "cannot open file" << endl;
     }
-
     myfile.close();
 }

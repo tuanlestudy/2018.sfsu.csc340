@@ -17,5 +17,9 @@ bool wordpairMapping( vector<string>& sentences, map< pair<string,string>, int>&
 bool freqWordpairMmap(map< pair<string,string>, int> &wordpairFreq_map, multimap<int, pair<string,string> > &freqWordpair_mmap );
 void printWordpairs(multimap<int, pair<string, string> > &freqWordpair_multimap, string outFname, int topCnt, int botCnt);
 
+bool wordpairMapping( vector<string>& sentences, map< pair<string,string>, int> &wordpairFreq_map);
+bool myfunction (int i,int j);
+
+void printTest();
 
 #endif
