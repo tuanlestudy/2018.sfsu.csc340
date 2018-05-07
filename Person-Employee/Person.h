@@ -28,7 +28,7 @@ public:
     virtual void setEmail( string new_email); //new_email-->personalEmail
     virtual string getTypeOfObj() const; //return "Person"
 
-
+    Person(int pSSN, string pName, string email, int count, string *places);
 private:
     int SSN;
     string name;
