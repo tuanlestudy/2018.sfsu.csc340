@@ -21,7 +21,7 @@ public:
     Person( const Person &clone );
 
     string getPlace(int i) const; //return the i-th place in the placesVisited array if i is valid; otherwise return "out-of-boundary".
-    virtual string getSSN() const;
+    virtual int getSSN() const;
     virtual string getName() const;
     virtual int getCount() const;
     virtual string getEmail() const; //return personalEmail

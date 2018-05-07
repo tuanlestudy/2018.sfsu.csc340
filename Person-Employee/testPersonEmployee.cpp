@@ -36,3 +36,4 @@ int main()
     cout << endl;
     return 0;
 }
+// g++ -std=c++11 Employee.cpp testPersonEmployee.cpp Person.cpp -Wall -o a.out 

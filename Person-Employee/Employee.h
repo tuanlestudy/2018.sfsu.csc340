@@ -18,7 +18,7 @@ public:
 
     double getChangeRate( int i) const;////return the i-th rate in the sal_change_rates array if i is valid; otherwise return -1.00
     virtual double getSalary() const;
-    virtual double getCount() const;
+    int getCount() const;
     virtual string getEmail() const; //return work_email
     virtual void setEmail( string new_email); //new_email-->work_email
     virtual string getTypeOfObj() const; //return "Employee"
