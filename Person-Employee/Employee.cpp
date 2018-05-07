@@ -84,13 +84,13 @@ void mixedArray(Person **&arrayPersonEmp, int numPersons, int numEmployees)
         {
             Person *p = new Person;
             arrayPersonEmp[i] = p;
-            arrayPersonEmp[i]->setEmail("personal@mail.com");
+            arrayPersonEmp[i]->setEmail("personal@gmail.com");
         }
         else
         {
             Employee *e = new Employee;
             arrayPersonEmp[i] = e;
-            arrayPersonEmp[i]->setEmail("work@mail.com");
+            arrayPersonEmp[i]->setEmail("work@gmail.com");
         }
     }
 }
@@ -100,7 +100,7 @@ void deleteMixedArray(Person **&arrayPersonEmp, int size)
 {
     for (int i = 0; i < size; i++)
     {
-        cout << arrayPersonEmp[i]->getTypeOfObj() << " object is deleting..." << endl;
+        //cout << arrayPersonEmp[i]->getTypeOfObj() << " object is deleting..." << endl;
         delete arrayPersonEmp[i];
     }
 }
